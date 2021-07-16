@@ -34,7 +34,7 @@ public class Main {
         low = 0;
         high = data.length - 1;
         while (cari >= data[low] && cari <= data[high]) {
-            pos = ((cari - data[low]) / (data[high]-data[low]));
+            pos = ((cari - data[low]) / (data[high]-data[low])) * (high - low) + low;
             if (data[pos] == cari) {
                 return pos;
             }
