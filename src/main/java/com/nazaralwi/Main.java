@@ -1,7 +1,27 @@
 package com.nazaralwi;
 
+import java.util.Random;
+
 public class Main {
     static int temp, pos, i, j, start, end, mid, low, high;
+
+    public static void main(String[] args) {
+        Random random = new Random();
+
+        int[] data = new int[100];
+
+        for (int i = 0; i < 10; i++) {
+            data[i] = random.nextInt(100);
+        }
+
+        for (int k = 0; k < 10; k++) {
+            System.out.print(data[k] + " ");
+        }
+
+        System.out.println();
+
+        System.out.println(sequential(data, 8));
+    }
 
     public static int sequential(int[] data, int cari) {
         for (int i = 0; i < data.length; i++) {
