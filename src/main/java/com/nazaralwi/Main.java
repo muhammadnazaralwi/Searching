@@ -5,7 +5,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
-    static int temp, pos, i, j, start, end, mid, low, high;
+    static int pos, start, end, mid, low, high;
 
     public static void main(String[] args) {
         Random random = new Random();
