@@ -34,14 +34,14 @@ public class Main {
 
         System.out.println();
 
-        System.out.println(sequential(data, 8));
+        System.out.println(sequentialSearch(data, 8));
 
         System.out.println(binarySearch(data2, 8));
 
         System.out.println(interpolationSearch(data3, 5));
     }
 
-    public static int sequential(int[] data, int cari) {
+    public static int sequentialSearch(int[] data, int cari) {
         for (int i = 0; i < data.length; i++) {
             if (data[i] == cari) {
                 return i;
