@@ -1,5 +1,6 @@
 package com.nazaralwi;
 
+import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -10,31 +11,43 @@ public class Main {
         System.out.println("JAWABAN SOAL #1");
         Random random = new Random();
         int[] data = new int[10];
+        int value = 89;
 
         for (int i = 0; i < 10; i++) {
             data[i] = random.nextInt(100);
         }
 
-        for (int k = 0; k < 10; k++) {
-            System.out.print(data[k] + " ");
+        System.out.println("Array: " + Arrays.toString(data));
+        System.out.println("Data yang dicari: " + value);
+
+        if (sequentialSearch(data, value) == -1) {
+            System.out.println("Data tidak ditemukan");
+        } else {
+            System.out.println("Data ditemukan");
         }
-
-        System.out.println();
-
-        System.out.println(sequentialSearch(data, 8));
 
         System.out.println();
 
         System.out.println("JAWABAN SOAL #2");
         int[] data2 = { 2, 3, 18, 4, 29, 84, 9, 2, 34, 22 };
+        int value2 = 18;
 
-        System.out.println(binarySearch(data2, 8));
+        System.out.println("Array: " + Arrays.toString(data2));
+        System.out.println("Data yang dicari: " + value2);
+
+        if (binarySearch(data2, value2) == -1) {
+            System.out.println("Data tidak ditemukan");
+        } else {
+            System.out.println("Data ditemukan");
+        }
 
         System.out.println();
 
         System.out.println("JAWABAN SOAL #3");
         Scanner scanner = new Scanner(System.in);
         int dataCount;
+        int value3;
+
         System.out.print("Masukkan jumlah data: ");
         dataCount = scanner.nextInt();
 
@@ -44,7 +57,18 @@ public class Main {
             data3[i] = scanner.nextInt();
         }
 
-        System.out.println(interpolationSearch(data3, 5));
+        System.out.print("Masukkan data yang ingin dicari: ");
+        value3 = scanner.nextInt();
+
+        System.out.println();
+
+        System.out.println("Array: " + Arrays.toString(data3));
+        System.out.println("Data yang dicari: " + value3);
+        if (interpolationSearch(data3, value3) == -1) {
+            System.out.println("Data tidak ditemukan");
+        } else {
+            System.out.println("Data ditemukan");
+        }
     }
 
     public static int sequentialSearch(int[] data, int cari) {
