@@ -1,5 +1,6 @@
 package com.nazaralwi;
 
+import java.util.Arrays;
 import java.util.Random;
 
 public class Main {
@@ -8,7 +9,8 @@ public class Main {
     public static void main(String[] args) {
         Random random = new Random();
 
-        int[] data = new int[100];
+        int[] data = new int[10];
+        int[] data2 = { 2, 3, 18, 4, 29, 84, 9, 2, 34, 22 };
 
         for (int i = 0; i < 10; i++) {
             data[i] = random.nextInt(100);
@@ -21,6 +23,8 @@ public class Main {
         System.out.println();
 
         System.out.println(sequential(data, 8));
+
+        System.out.println(binarySearch(data2, 8));
     }
 
     public static int sequential(int[] data, int cari) {
@@ -43,7 +47,7 @@ public class Main {
             } else if (data[mid] < cari) {
                 start = mid + 1;
             } else {
-                end = mid + 1;
+                end = mid - 1;
             }
         }
         return -1;
