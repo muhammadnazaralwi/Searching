@@ -1,6 +1,5 @@
 package com.nazaralwi;
 
-import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -8,21 +7,9 @@ public class Main {
     static int pos, start, end, mid, low, high;
 
     public static void main(String[] args) {
+        System.out.println("JAWABAN SOAL #1");
         Random random = new Random();
-        Scanner scanner = new Scanner(System.in);
-
         int[] data = new int[10];
-        int[] data2 = { 2, 3, 18, 4, 29, 84, 9, 2, 34, 22 };
-
-        int dataCount;
-        System.out.print("Masukkan jumlah data: ");
-        dataCount = scanner.nextInt();
-
-        int[] data3 = new int[dataCount];
-        for (int i = 0; i < data3.length; i++) {
-            System.out.print("Masukkan data ke-" + (i+1) + ": ");
-            data3[i] = scanner.nextInt();
-        }
 
         for (int i = 0; i < 10; i++) {
             data[i] = random.nextInt(100);
@@ -36,7 +23,26 @@ public class Main {
 
         System.out.println(sequentialSearch(data, 8));
 
+        System.out.println();
+
+        System.out.println("JAWABAN SOAL #2");
+        int[] data2 = { 2, 3, 18, 4, 29, 84, 9, 2, 34, 22 };
+
         System.out.println(binarySearch(data2, 8));
+
+        System.out.println();
+
+        System.out.println("JAWABAN SOAL #3");
+        Scanner scanner = new Scanner(System.in);
+        int dataCount;
+        System.out.print("Masukkan jumlah data: ");
+        dataCount = scanner.nextInt();
+
+        int[] data3 = new int[dataCount];
+        for (int i = 0; i < data3.length; i++) {
+            System.out.print("Masukkan data ke-" + (i+1) + ": ");
+            data3[i] = scanner.nextInt();
+        }
 
         System.out.println(interpolationSearch(data3, 5));
     }
